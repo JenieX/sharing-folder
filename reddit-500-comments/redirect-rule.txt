@@ -1,0 +1,9 @@
+Reddit 500 comments
+
+https://www.reddit.com/r/worldcup/comments/zp44zk/postmatch_thread_argentina_vs_france/
+
+(https:\/\/www\.reddit\.com\/r\/\w+?\/comments\/\w+?\/\w+?\/)$
+
+$1?limit=500
+
+Pattern type: Regular Expression
