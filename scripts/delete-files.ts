@@ -2,7 +2,13 @@ import path from 'node:path';
 import fs from 'node:fs';
 import fsp from 'node:fs/promises';
 
-// tsx delete-files.ts
+/**
+ * To run this script use `tsx` package.
+ * To install it if not already installed:
+ * npm i tsx -g
+ *
+ * Then > tsx delete-files.ts
+ */
 
 const root = 'D:\\zero-down';
 
@@ -24,11 +30,7 @@ async function deleteFiles(folder: string): Promise<void> {
 
     if (isFolder) {
       await deleteFiles(path.resolve(folder, item.name));
-
-      return;
-    }
-
-    if (condition(item.name)) {
+    } else if (condition(item.name)) {
       const filePath = path.resolve(folder, item.name);
       console.log(filePath);
       // Uncomment the next line to have each matched file deleted
